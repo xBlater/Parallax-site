@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax site and Random Quotes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+      var quotes = [
+      '"Death is not the greatest loss in life. The greatest loss is what dies inside while still alive. Never surrender." - 2Pac',
+      '"Money is something that keeps you alive and healthy and just keeps you focused. It\'s the drive. It\'s the passion." - Travis Scott',
+      '"The thing about hip-hop today is it\'s smart, it\'s insightful. The way they can communicate a complex message in a very short space is remarkable." - Barack Obama',
+      '"I\'ve got a pen and I\'ve got a phone - and I can use that pen to sign executive orders and take executive actions and administrative actions that move the ball forward." - Barack Obama',
+      '"I think when you spread the wealth around it\'s good for everybody." - Barack Obama',
+      ]
+
+      function newQuote(){
+        var randomNumber = Math.floor(Math.random() * (quotes.length));
+        document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
+      }
+
+    </script>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="#welcome" class="link">Welcome Section</a> <a href="#generator" class="link">Quotes Generator</a> <a href="#quoteDisplay" class="link">Contact Me!</a>
+    </nav>
+    <section id="welcome">
+        <div class="welcome-detail">
+            <h1>Welcome to the random Quotes generator page.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quaerat numquam non dignissimos quibusdam praesentium magnam deserunt aliquam debitis.</p>
+        </div>
+    </section>
+
+    <section id="generator">
+        <div id="quoteDisplay">
+          <p>Quotes will appear here!</p>
+        </div>
+        <button id="gen_button" onclick="newQuote()">Another One!</button>
+    </section>
+    <section id="contact">
+      <div class="contact-detail">
+        <h2>Let's work together...</h2>
+        <h2>Contact me!</h2>
+        <!--- tutaj ikonki z linkami -->
+        <a href="#" target="_blank"><img class="cont_img" alt="facebook icon image" src="https://image.flaticon.com/icons/png/512/1384/1384005.png"></a>
+        <a href="#" target="_blank"><img class="cont_img" alt="linkedin icon image" src="https://image.flaticon.com/icons/png/512/1384/1384014.png"></a>
+        <a href="#" target="_blank"><img class="cont_img" alt="twitter icon image" src="https://cdn-icons-png.flaticon.com/512/2111/2111708.png"></a>
+      </div>
+    </section>
+    <section id="foot">
+        <h6>Created by: Bartosz Kondeja</h6>
+        <h6>All rights reserved</h6>
+    </section>
+</body>
+</html>
